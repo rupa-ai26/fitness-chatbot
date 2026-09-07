@@ -1,58 +1,109 @@
-print("====================================")
-print("      FITNESS AI CHATBOT 💪")
-print("====================================")
-
-print("Hello! I'm your Fitness Assistant.")
-print("I can help you with workouts, food, water, sleep, and fitness goals.")
-print("Type 'bye' to exit.")
-
-while True:
-    user_input = input("\nYou: ").lower()
+def get_bot_response(user_input):
+    user_input = user_input.lower()
 
     if user_input == "bye":
-        print("Bot: Goodbye! Stay healthy and keep moving! 💪")
-        break
+        return "Goodbye! Stay healthy and keep moving! 💪"
 
     elif "hello" in user_input or "hi" in user_input:
-        print("Bot: Hello! 👋 How can I help you with your fitness today?")
+        return "Hello! 👋 How can I help you with your fitness today?"
 
     elif "weight loss" in user_input or "lose weight" in user_input:
-        print("\nBot: For weight loss, try this beginner workout:")
-        print("1. Brisk walking - 20 minutes")
-        print("2. Squats - 10 reps")
-        print("3. Lunges - 8 reps each leg")
-        print("4. Jumping jacks - 15 reps")
-        print("5. Plank - 20 seconds")
-        print("Bot: Start slowly and increase gradually.")
+        return """For weight loss, try this beginner workout:
+
+1. Brisk walking - 20 minutes
+2. Squats - 10 reps
+3. Lunges - 8 reps each leg
+4. Jumping jacks - 15 reps
+5. Plank - 20 seconds
+
+Start slowly and increase gradually. 💪"""
 
     elif "muscle" in user_input or "muscle building" in user_input:
-        print("\nBot: For muscle building, try this beginner workout:")
-        print("1. Squats - 10 reps")
-        print("2. Push-ups or wall push-ups - 8 reps")
-        print("3. Lunges - 8 reps each leg")
-        print("4. Glute bridges - 12 reps")
-        print("5. Plank - 20 seconds")
-        print("Bot: Focus on proper form and allow recovery between workouts.")
+        return """For muscle building, try this beginner workout:
+
+1. Squats - 10 reps
+2. Push-ups or wall push-ups - 8 reps
+3. Lunges - 8 reps each leg
+4. Glute bridges - 12 reps
+5. Plank - 20 seconds
+
+Focus on proper form and allow recovery between workouts. 💪"""
 
     elif "fitness" in user_input or "fit" in user_input:
-        print("\nBot: For general fitness, try:")
-        print("1. Walking - 15 minutes")
-        print("2. Squats - 10 reps")
-        print("3. Wall push-ups - 10 reps")
-        print("4. Lunges - 8 reps each leg")
-        print("5. Stretching - 5 minutes")
+        return """For general fitness, try:
+
+1. Walking - 15 minutes
+2. Squats - 10 reps
+3. Wall push-ups - 10 reps
+4. Lunges - 8 reps each leg
+5. Stretching - 5 minutes"""
 
     elif "workout" in user_input or "exercise" in user_input:
-        print("Bot: Tell me your goal: weight loss, muscle building, or general fitness.")
+        return """Here is a simple beginner workout plan:
+
+🏃 Warm-up - 5 minutes
+
+💪 Main Workout:
+1. Squats - 3 sets × 10 reps
+2. Push-ups - 3 sets × 8 reps
+3. Lunges - 3 sets × 8 each leg
+4. Glute bridges - 3 sets × 12 reps
+5. Plank - 3 × 20 seconds
+
+🧘 Cool-down - 5 minutes
+
+Take rest between sets and focus on proper form."""
 
     elif "food" in user_input or "diet" in user_input:
-        print("Bot: Try including vegetables, fruits, whole grains, pulses, and adequate protein.")
+        return """🥗 Beginner Healthy Diet Plan
 
-    elif "water" in user_input:
-        print("Bot: Staying hydrated is important. Drink water regularly throughout the day.")
+🌅 Breakfast:
+• Oats or whole-grain breakfast
+• 1 fruit
+• Milk or curd
+
+🍎 Mid-Morning:
+• One fruit or a handful of nuts
+
+🍛 Lunch:
+• Rice or roti
+• Dal/pulses
+• Plenty of vegetables
+• Curd
+
+☕ Evening:
+• Fruit or roasted nuts
+
+🌙 Dinner:
+• Roti or a moderate portion of rice
+• Vegetables
+• Dal/paneer/another protein source
+
+💧 Drink water regularly throughout the day.
+
+Focus on balanced, nutritious foods and appropriate portions."""
+
+    elif "water" in user_input or "hydration" in user_input:
+        return """💧 Daily Hydration Guide
+
+• Drink water regularly throughout the day
+• Have a glass of water after waking up
+• Drink water with meals
+• Drink more during exercise or hot weather
+• Keep a water bottle with you
+
+Your exact water needs depend on your body, activity level, climate, and other factors."""
 
     elif "sleep" in user_input:
-        print("Bot: Good sleep supports recovery and overall health. Try maintaining a regular sleep schedule.")
+        return """😴 Sleep & Recovery Guide
+
+• Aim for a consistent sleep schedule
+• Keep your bedroom comfortable and quiet
+• Reduce phone/screen use before bedtime
+• Avoid heavy meals close to bedtime
+• Give your body enough time to recover after workouts
+
+Good sleep supports recovery, energy, and overall health."""
 
     else:
-        print("Bot: I'm still learning! Try asking me about workouts, food, water, sleep, or fitness goals.")
+        return "I'm still learning! Try asking me about workouts, food, water, sleep, or fitness goals."
